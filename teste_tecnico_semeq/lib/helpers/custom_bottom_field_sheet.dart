@@ -22,7 +22,6 @@ void showCustomBottomSheet(BuildContext context, String title, String message) {
         child: Column(
           mainAxisSize: MainAxisSize.min, 
           children: [
-            // Título em rosa
             Text(
               title,
               style: const TextStyle(
@@ -40,8 +39,6 @@ void showCustomBottomSheet(BuildContext context, String title, String message) {
               ),
             ),
             const SizedBox(height: 20),
-
-            // Botão OK
             SizedBox(
               width: double.infinity, 
               child: ElevatedButton(
