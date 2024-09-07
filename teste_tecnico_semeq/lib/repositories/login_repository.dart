@@ -27,7 +27,6 @@ class LoginRepository implements ILoginRepository {
         return null; 
       }
     } catch (e) {
-      print("Erro durante o login: $e");
       return null;
     }
   }

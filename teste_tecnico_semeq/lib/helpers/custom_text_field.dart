@@ -5,12 +5,11 @@ class CustomTextField extends StatelessWidget {
   final bool obscureText;
   final Widget? suffixIcon;
 
-  const CustomTextField({
-    super.key,
+  const CustomTextField({Key? key, 
     required this.controller,
     this.obscureText = false,
     this.suffixIcon,
-  });
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

@@ -7,7 +7,7 @@ import 'package:teste_tecnico_semeq/views/login/login_bloc.dart';
 
 class LoginView extends StatefulWidget {
   final ILoginBloc bloc;
-  const LoginView(this.bloc, {super.key});
+  const LoginView(this.bloc, {Key? key}) : super(key: key);
 
   @override
   State<LoginView> createState() => _LoginViewState();
@@ -150,7 +150,6 @@ class _LoginViewState extends State<LoginView> {
                         height: 50,
                         child: ElevatedButton(
                           onPressed: () async {
-                            // Verifica se os campos estão preenchidos
                             if (_userController.text.isEmpty ||
                                 _passwordController.text.isEmpty) {
                               showCustomBottomSheet(
@@ -170,7 +169,7 @@ class _LoginViewState extends State<LoginView> {
                                   context,
                                   MaterialPageRoute(
                                       builder: (context) =>
-                                          const HomeView()));
+                                           HomeView(accessToken)));
                             } else {
                               showCustomBottomSheet(
                                 context,
